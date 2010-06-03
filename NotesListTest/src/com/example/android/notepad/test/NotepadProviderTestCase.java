@@ -1,16 +1,15 @@
 package com.example.android.notepad.test;
 
-import com.example.android.notepad.NotePad;
-import com.example.android.notepad.NotePadProvider;
-import com.example.android.notepad.NotePad.Notes;
-
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
-import android.test.MoreAsserts;
 import android.test.ProviderTestCase2;
+
+import com.example.android.notepad.NotePad;
+import com.example.android.notepad.NotePadProvider;
+import com.example.android.notepad.NotePad.Notes;
 
 public class NotepadProviderTestCase extends ProviderTestCase2<NotePadProvider> {
 
@@ -18,13 +17,11 @@ public class NotepadProviderTestCase extends ProviderTestCase2<NotePadProvider> 
         super(NotePadProvider.class, "com.google.provider.NotePad");
     }
 
-    private Context context;
     private ContentResolver contentResolver;
 
     @Override
     protected void setUp() throws Exception {
         super.setUp();
-        context = getMockContext();
         contentResolver = getMockContentResolver();
     }
     
